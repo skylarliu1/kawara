@@ -1,0 +1,42 @@
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+<script>  
+//   function createBox () {
+//     div = document.createElement('div')
+//     div.style.backgroundColor = 'red'
+//     div.style.width = window.innerWidth + 'px'
+//     div.style.height = window.innerHeight + 'px'
+//     document.body.appendChild(div)
+//   }
+  
+//   function resizeBox () {
+//     div.style.width = window.innerWidth + 'px'
+//     div.style.height = window.innerHeight + 'px'
+//   }
+  
+  function onKawara () {
+    const bgcols = ['red', 'DodgerBlue', 'black']
+    document.body.style.backgroundColor = bgcols[Math.floor(Math.random() * 3)]
+    document.body.style.display = 'grid'
+    document.body.style.justifyContent = 'center'
+    document.body.style.alignItems = 'center'
+    document.body.style.height = '100vh'
+    
+		// const d = new Date()
+		// const day = d.getDate()
+		// const monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+		// "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+		// const month = monthNames[d.getMonth()]
+		// const year = d.getFullYear()
+    
+    const date = document.createElement('date')
+    date.textContent = moment().format('MMM. DD, YYYY')
+    date.style.color = 'white'
+    date.style.fontSize = '10vw'
+    date.style.fontFamily = 'Futura'
+    document.body.appendChild(date)
+  }
+
+  // window.addEventListener('load', createBox)
+  // window.addEventListener('resize', resizeBox)
+  window.addEventListener('load', onKawara)
+</script>
